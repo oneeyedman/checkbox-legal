@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de checkbox legal con enlace</title>
+  <link rel="stylesheet" href="checkbox.css">
+</head>
+<body>
+
+  <div class="row">
+    <h2>Caso 1: label con texto "oculto" y descripción extra con su enlace</h2>
+    <div class="checkbox-legal">
+      <input type="checkbox" name="checkboxLegal" id="checkboxLegal" class="checkbox-legal__field">
+      <label for="checkboxLegal" class="checkbox-legal__label"><span class="accessible-hide">Soy mayor de edad y he leído y aceptado el tratamiento de datos personales para esta solicitud.</span></label>
+      <p class="checkbox-legal__description">Soy mayor de edad y he leído y aceptado el <a href="" target="_blank">tratamiento
+      de datos personales para esta solicitud</a>.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <h2>Caso 2: label sin nada y descripción extra con su enlace. Se usa aria-labeledby y aria-described-by</h2>
+    <div class="checkbox-legal">
+      <input type="checkbox" name="checkboxLegal1" id="checkboxLegal1" class="checkbox-legal__field" aria-labelledby="checkboxDescription">
+      <label for="checkboxLegal1" class="checkbox-legal__label" aria-describedby="checkboxDescription"></label>
+      <p id="checkboxDescription" class="checkbox-legal__description">Soy mayor de edad y he leído y aceptado el <a href=""
+          target="_blank">tratamiento
+          de datos personales para esta solicitud</a>.</p>
+    </div>
+  </div>
+
+</body>
+</html>
